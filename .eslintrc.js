@@ -2,28 +2,33 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
-    jest: true
+    jest: true,
   },
   settings: {
     react: {
-      createClass: 'createReactClass',
-      pragma: 'React',
-      fragment: 'Fragment',
-      version: '18.2.0'
-    }
+      createClass: "createReactClass",
+      pragma: "React",
+      fragment: "Fragment",
+      version: "18.2.0",
+    },
   },
-  extends: ['plugin:react/recommended', 'plugin:react/jsx-runtime', 'standard'],
+  extends: [
+    "plugin:react/recommended",
+    "plugin:react/jsx-runtime",
+    "standard",
+    "prettier",
+  ],
   overrides: [],
   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
+    ecmaVersion: "latest",
+    sourceType: "module",
     ecmaFeatures: {
-      jsx: true
-    }
+      jsx: true,
+    },
   },
-  plugins: ['react'],
+  plugins: ["react"],
   rules: {
-    'react/jsx-uses-react': 'error',
-    'react/jsx-uses-vars': 'error'
-  }
-}
+    "react/jsx-uses-react": "error",
+    "react/jsx-uses-vars": "error",
+  },
+};
