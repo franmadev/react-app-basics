@@ -19,7 +19,8 @@
     "lint": "eslint .",
     "lint:fix": "eslint --fix . --ext .js,.jsx",
     "formatter": "prettier . --check",
-    "formatter:fix": "prettier . --write"
+    "formatter:fix": "prettier . --write",
+    "prepare": "husky install"
   },
   "eslintConfig": {
     "extends": [
@@ -47,6 +48,13 @@
     "eslint-plugin-n": "^15.2.5",
     "eslint-plugin-promise": "^6.0.1",
     "eslint-plugin-react": "^7.31.1",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "mrm": "^4.1.0",
     "prettier": "^2.7.1"
+  },
+  "lint-staged": {
+    "*.js": "eslint --cache --fix",
+    "*.{js,css,md}": "prettier --write"
   }
 }
